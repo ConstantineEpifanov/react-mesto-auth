@@ -12,7 +12,7 @@ function Header({email, onLogOut}) {
           element={
             <div className="header__nav">
               <p className="header__email">{email}</p>
-              <Link className="header__link" onClick={onLogOut}>
+              <Link className="header__link header__link_active" onClick={onLogOut}>
                 Выйти
               </Link>
             </div>
