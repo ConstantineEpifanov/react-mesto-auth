@@ -68,8 +68,8 @@ function App() {
       let token = localStorage.getItem("token");
       auth
         .checkToken(token)
-        .then((data) => {
-          setEmail(data.email);
+        .then((res) => {
+          setEmail(res.data.email);
           setLoggedIn(true);
           navigate("/", { replace: true });
         })
@@ -182,6 +182,7 @@ function App() {
             path="/"
             element={
               <ProtectedRoute
+              
                 loggedIn={loggedIn}
                 component={Main}
                 onEditProfile={handleEditProfileClick}
