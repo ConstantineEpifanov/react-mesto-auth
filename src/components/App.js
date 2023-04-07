@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import "../page/index.css";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -75,7 +75,7 @@ function App() {
         })
         .catch(console.log);
     }
-  }, []);
+  }, [navigate]);
 
   useEffect(() => {
     if (loggedIn) {
